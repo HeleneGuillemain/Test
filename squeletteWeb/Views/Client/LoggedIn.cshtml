@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "LoggedIn";
+}
+
+<h2>LoggedIn</h2>
+@if(Session["ClientId"] != null)
+{
+    <h4>Hello @Session["Prenom"].ToString()</h4>
+}
+
+<div>
+    @Html.ActionLink("Se déconnecter", "Logout")
+</div>

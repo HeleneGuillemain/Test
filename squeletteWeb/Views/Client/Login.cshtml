@@ -1,0 +1,16 @@
+﻿@model squeletteWeb.Métier.Client
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm("Login", "Client", FormMethod.Post))
+{
+    @Html.ValidationSummary(true,"", new { @class = "text-danger"})
+    <span>@Html.DisplayNameFor(model => model.login) :</span><span>@Html.TextBoxFor(model => model.login)</span><br />
+    <span>@Html.DisplayNameFor(model => model.MotDePasse) :</span><span>@Html.PasswordFor(model => model.MotDePasse)</span><br />
+    <button type="submit">Valider</button>
+}
+

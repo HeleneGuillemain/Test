@@ -1,0 +1,15 @@
+﻿@model squeletteWeb.Métier.MagasinProduit
+@{
+    ViewBag.Title = "ajouterProduitMagasin";
+}
+
+<h2>ajouterProduitMagasin</h2>
+<div class="form-horizontal">
+    @using (Html.BeginForm("ajouterProduitMagasin", "MagasinProduit", FormMethod.Post))
+    {
+        <span>@Html.DisplayNameFor(model => model.magasin) :</span><span>@Html.DropDownList("MagasinId")</span><br />
+        <span>@Html.DisplayNameFor(model => model.produit) :</span><span>@Html.DropDownList("ProduitId")</span><br />
+        <span>@Html.DisplayNameFor(model => model.stock) :</span><span>@Html.TextBoxFor(model => model.stock)</span><br />
+        <button type="submit">Valider</button>
+    }
+</div>

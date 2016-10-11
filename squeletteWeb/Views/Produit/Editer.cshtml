@@ -1,0 +1,18 @@
+﻿@model squeletteWeb.Métier.Produit
+@{
+    ViewBag.Title = "Editer";
+}
+
+<h2>Editer</h2>
+
+<div class="form-horizontal">
+    @using (Html.BeginForm("Editer", "Produit", FormMethod.Post))
+    {
+        @Html.HiddenFor(model=>model.ProduitId)
+        <span>@Html.DisplayNameFor(model => model.Nom) :</span><span>@Html.TextBoxFor(model => model.Nom)</span><br />
+        <span>@Html.DisplayNameFor(model => model.Prix) :</span><span>@Html.TextBoxFor(model => model.Prix)</span> <br />
+        <span>@Html.DisplayNameFor(model => model.Description) :</span><span>@Html.TextBoxFor(model => model.Description)</span>
+        <span>@Html.DisplayNameFor(model => model.categorie)</span><span>@Html.DropDownList("CategorieId")</span>
+        <button type="submit">Mettre à jour</button>
+    }
+</div>

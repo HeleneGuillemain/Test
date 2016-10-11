@@ -1,0 +1,12 @@
+﻿@model squeletteWeb.Métier.Magasin
+@{
+    ViewBag.Title = "AjouterMagasin";
+}
+
+<h2>AjouterMagasin</h2>
+
+@using(Html.BeginForm("AjouterMagasin","Magasin",FormMethod.Post))
+{
+    <span>@Html.DisplayNameFor(model=>model.NomMagasin) :</span><span>@Html.TextBoxFor(model=>model.NomMagasin)</span>
+    <button type="submit">Valider</button>
+}

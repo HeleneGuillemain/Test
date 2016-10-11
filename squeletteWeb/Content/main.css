@@ -1,0 +1,37 @@
+﻿body {
+    background-color:aquamarine;
+}
+
+#head
+{
+    height:150px;
+    background-color:blueviolet;
+}
+
+#menu
+{
+    display: inline-block;
+    float:left;
+    height:700px;
+    width:20%;
+    background-color:grey;
+}
+
+#body
+{
+    height:700px;
+    width:100%;
+    background-color:blue;
+}
+
+#foot
+{
+    height:150px;
+    background-color:red;
+}
+
+h2
+{
+    margin:0px;
+    color: white;
+}

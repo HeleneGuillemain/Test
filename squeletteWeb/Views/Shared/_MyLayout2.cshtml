@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>@ViewBag.Title - My Personal Layout</title>
+        <link href="@Url.Content("~/Content/main.css")" rel="stylesheet" type="text/css" />
+        @RenderSection("ExternalCSS",false)
+    </head>
+    <body>
+        <div id="head">HEAD</div>
+        <div id="menu">MENU
+            <ul>
+                <li>@Html.ActionLink("TestLayout","TestLayout")</li>
+                <li>@Html.ActionLink("TestLayout2","TestLayout2")</li>
+            </ul>    
+        </div>
+        <div id="body">@RenderBody()</div>
+        <div id="foot">FOOT</div>
+        @RenderSection("ExternalJS",false)
+    </body>
+</html>

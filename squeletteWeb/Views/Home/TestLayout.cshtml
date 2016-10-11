@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "TestLayout";
+    Layout="~/Views/Shared/_MyLayout2.cshtml";
+}
+
+<h2>TestLayout</h2>
+<p id="test">Ce paragraphe va disparaître progressivement</p>
+
+@section ExternalCSS
+{
+    <style>
+        h2
+        {
+            color:red;
+        }
+    </style>
+}
+
+@section ExternalJS
+{
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+        $('document').ready(function () {
+            $('#test').fadeOut(2000);
+        });
+    </script>
+}

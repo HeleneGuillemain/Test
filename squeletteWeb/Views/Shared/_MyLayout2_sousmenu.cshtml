@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>@ViewBag.Title - My Personal Layout</title>
+        <link href="@Url.Content("~/Content/main_sousmenu.css")" rel="stylesheet" type="text/css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        @RenderSection("ExternalCSS",false)
+    </head>
+    <body>
+        <!--Début du menu-->
+        <nav>
+            <ul>
+                <li class="menu_html"><a href="#">HTML</a>
+                    <ul class="submenu">
+                        <li><a href="#">Cours HTML et CSS</a></li>
+                        <li><a href="#">Elément HTML</a></li>
+                        <li><a href="#">Attributs HTML</a></li>
+                        <li><a href="#">Exercices</a></li>
+                    </ul>
+                </li>
+                <li class="menu_css">
+                    <a href="#">CSS</a>
+                    <ul class="submenu">
+                        <li><a href="#">Cours HTML et CSS</a></li>
+                        <li><a href="#">Propriétés CSS</a></li>
+                        <li><a href="#">Sélecteurs CSS</a></li>
+                        <li><a href="#">Exercices</a></li>
+                    </ul>
+                </li>
+                <li class="menu_js">
+                    <a href="#">Javascript</a>
+                    <ul class="submenu">
+                        <li><a href="#">Cours Javascript</a></li>
+                        <li><a href="#">Fonctions Javascript</a></li>
+                        <li><a href="#">Le DOM</a></li>
+                        <li><a href="#">Exercices</a></li>
+                    </ul>
+                </li>
+                <li class="menu_contact"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <!--Fin du menu-->
+        @RenderBody()
+        @RenderSection("ExternalJS",false)
+    </body>
+</html>

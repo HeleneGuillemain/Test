@@ -1,0 +1,26 @@
+﻿@model IEnumerable<squeletteWeb.Métier.Categorie>
+@{
+    ViewBag.Title = "IndexCategorie";
+}
+
+<h2>Liste des catégories</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model=>model.CategorieId)</th>
+            <th>@Html.DisplayNameFor(model=>model.NomCategorie)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var c in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem=>c.CategorieId)</td>
+                <td>@Html.DisplayFor(modelItem=>c.NomCategorie)</td>
+                <td>@Html.ActionLink("Modifier","EditerCategorie", new {id = c.CategorieId})</td>
+                <td>@Html.ActionLink("Supprimer","DeleteCategorie",new {id = c.CategorieId})</td>
+            </tr>
+        }
+    </tbody>
+</table>

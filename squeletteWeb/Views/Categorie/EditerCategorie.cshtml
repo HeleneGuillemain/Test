@@ -1,0 +1,15 @@
+﻿@model squeletteWeb.Métier.Categorie
+@{
+    ViewBag.Title = "EditerCategorie";
+}
+
+<h2>Editer la categorie</h2>
+
+<div class="form-horizontal">
+    @using (Html.BeginForm("EditerCategorie", "Categorie", FormMethod.Post))
+    {
+        @Html.HiddenFor(model => model.CategorieId)
+        <span>@Html.DisplayNameFor(model => model.NomCategorie) :</span><span>@Html.TextBoxFor(model => model.NomCategorie)</span><br />
+        <button type="submit">Mettre à jour</button>
+    }
+</div>

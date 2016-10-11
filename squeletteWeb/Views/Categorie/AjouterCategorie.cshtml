@@ -1,0 +1,13 @@
+﻿@model squeletteWeb.Métier.Categorie
+@{
+    ViewBag.Title = "AjouterCategorie";
+}
+
+<h2>AjouterCategorie</h2>
+@using(Html.BeginForm("AjouterCategorie","Categorie",FormMethod.Post))
+{
+    <span>@Html.DisplayNameFor(model=>model.NomCategorie) :</span><span>@Html.TextBoxFor(model=>model.NomCategorie)</span>
+    <button type="submit">Valider</button>
+}
+
+

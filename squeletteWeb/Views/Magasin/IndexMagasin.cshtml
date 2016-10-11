@@ -1,0 +1,26 @@
+﻿@model IEnumerable<squeletteWeb.Métier.Magasin>
+@{
+    ViewBag.Title = "IndexMagasin";
+}
+
+<h2>Liste de magasins</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model=>model.MagasinId)</th>
+            <th>@Html.DisplayNameFor(model=>model.NomMagasin)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var m in Model){
+            <tr>
+                <td>@Html.DisplayFor(modelItem=>m.MagasinId)</td>
+                <td>@Html.DisplayFor(modelItem=>m.NomMagasin)</td>
+                <td>@Html.ActionLink("Modifier","EditerMagasin",new {id = m.MagasinId})</td>
+                <td>@Html.ActionLink("Supprimer","DeleteMagasin", new {id = m.MagasinId})</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<squeletteWeb.Métier.Produit>
+@{
+    ViewBag.Title = "TrouverProduitsParNom";
+}
+
+<h2>Recherche de produits par nom</h2>
+
+<div>
+    @using (Html.BeginForm("TrouverProduitsParNom", "Produit", FormMethod.Post))
+    {
+        <span>@Html.DisplayNameFor(model=>model.Nom) :</span><span>@Html.TextBox("nom")</span>   //Dans le TextBox, doit mettre le même nom que dans le controller en Post
+        <button type="submit">Rechercher</button>
+    }
+</div>
+
+
+<div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Nom)</th>
+                <th>@Html.DisplayNameFor(model => model.Prix)</th>
+                <th>@Html.DisplayNameFor(model => model.Description)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => p.Nom)</td>
+                    <td>@Html.DisplayFor(modelItem => p.Prix)</td>
+                    <td>@Html.DisplayFor(modelItem => p.Description)</td>
+                    <td>@Html.ActionLink("Ajouter au panier", "", new { id = p.ProduitId })</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
