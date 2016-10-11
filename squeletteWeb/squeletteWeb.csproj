@@ -137,6 +137,7 @@
     <Compile Include="Models\MagasinProduitModel.cs" />
     <Compile Include="Models\ProduitCatModel.cs" />
     <Compile Include="Métier\Categorie.cs" />
+    <Compile Include="Métier\ClassTEST.cs" />
     <Compile Include="Métier\Client.cs" />
     <Compile Include="Métier\IMetier.cs" />
     <Compile Include="Métier\Magasin.cs" />
